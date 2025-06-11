@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+  <h3>Welcome, {{ session['username'] }}</h3>
+  <p>Wallet Balance: ₹{{ user['balance'] }}</p>
+  <p>Last Round Result: {{ last_result }}</p>
+
+  <form method="POST" action="/predict">
+    <button name="color" value="Red">Red</button>
+    <button name="color" value="Green">Green</button>
+    <button name="color" value="Violet">Violet</button>
+  </form>
+
+  <br>
+  <a href="/bonus">🎁 Claim Daily Bonus</a>
+</body>
+</html>
